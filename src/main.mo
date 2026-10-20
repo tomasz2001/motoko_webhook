@@ -9,4 +9,8 @@ actor test_webhook {
     set_webhook(value, name);
     return "drop";
   };
+  public query func teerg(name : Text) : async [Webhook.Webhook] {
+    //get_webhook(name);
+    return get_webhook(name);
+  };
 };

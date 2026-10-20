@@ -49,4 +49,11 @@ mixin () {
       Map.add(box_response, target, set);
     };
   };
+  private func get_webhook(text : Text) : [Webhook.Webhook] {
+    let dropp : ?[Webhook.Webhook] = Map.get(box_response, text);
+      switch (dropp) {
+        case (?webhook) { return webhook; };
+        case (null) {return response; }
+        };
+  };
 };
